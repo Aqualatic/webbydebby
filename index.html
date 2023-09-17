@@ -19,7 +19,10 @@
       body {
       background-color: black;
       color: white;
+      text-align: center;
+      font-size: 24px;
     }
+
   </style>
 </head>
 
@@ -76,5 +79,101 @@
     
 
 </body>
+
+
+<body>
+    <h1>v-counter-v</h1>
+    <p>This website has been visited <span id="visitCount">0</span> times.</p>
+
+    <script>
+        // Function to set or update the visit count in a cookie
+        function setVisitCount() {
+            // Check if the "visitCount" cookie exists
+            if (document.cookie.includes("visitCount=")) {
+                // Get the current value of the cookie and increment it
+                const currentCount = parseInt(getCookie("visitCount"));
+                const newCount = currentCount + 1;
+                document.getElementById("visitCount").textContent = newCount;
+                // Update the cookie with the new count
+                document.cookie = "visitCount=" + newCount;
+            } else {
+                // If the cookie doesn't exist, create it with a value of 1
+                document.cookie = "visitCount=1";
+                document.getElementById("visitCount").textContent = "1";
+            }
+        }
+
+        // Function to retrieve the value of a cookie by name
+        function getCookie(name) {
+            const cookies = document.cookie.split('; ');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].split('=');
+                if (cookie[0] === name) {
+                    return cookie[1];
+                }
+            }
+            return null;
+        }
+
+        // Call setVisitCount when the page loads to update the counter
+        setVisitCount();
+    </script>
+
+    <p>^ Imagine adding to that count :yawn: </p>
+    <p>I know who you are </p>
+    <p>Im Lying</p>
+    <p>Or am I?</p>
+
+
+    <h1>Youtube embed</h1>
+    <!-- Paste the YouTube <iframe> code here -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9bqk6ZUsKyA?si=boDbWInaiDaYpJDZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NmB69jakVjY?si=vqYJokvN_kC9KHvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/a8XjGKNzZ04?si=D-E3dXMoAgQZ6B2l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     
+
+
+
+
+
+      <h1>Live Countdown to Christmas</h1>
+      <p id="countdown"></p>
+  
+      <script>
+          // Function to update the countdown
+          function updateCountdown() {
+              // Set the date for Christmas (December 25th)
+              const christmasDate = new Date(new Date().getFullYear(), 11, 25, 0, 0, 0).getTime();
+              
+              // Get the current date and time
+              const currentDate = new Date().getTime();
+              
+              // Calculate the time remaining until Christmas
+              const timeRemaining = christmasDate - currentDate;
+  
+              if (timeRemaining <= 0) {
+                  document.getElementById("countdown").innerHTML = "Merry Christmas!";
+              } else {
+                  // Calculate days, hours, minutes, and seconds
+                  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+                  // Display the countdown
+                  document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until Christmas!`;
+
+
+                  
+                  // Schedule the next update in one second
+                  setTimeout(updateCountdown, 1000);
+              }
+          }
+  
+          // Initial call to display the countdown immediately
+          updateCountdown();
+      </script>
+  </body>
+
 
 </html>
