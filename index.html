@@ -73,6 +73,47 @@
     <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠉⠉⠚⠛⠿⢶⢵⠱⣑⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
 
 
+    <h1>Live Countdown to Christmas</h1>
+      <p id="countdown"></p>
+  
+      <script>
+          // Function to update the countdown
+          function updateCountdown() {
+              // Set the date for Christmas (December 25th)
+              const christmasDate = new Date(new Date().getFullYear(), 11, 25, 0, 0, 0).getTime();
+              
+              // Get the current date and time
+              const currentDate = new Date().getTime();
+              
+              // Calculate the time remaining until Christmas
+              const timeRemaining = christmasDate - currentDate;
+  
+              if (timeRemaining <= 0) {
+                  document.getElementById("countdown").innerHTML = "Merry Christmas!";
+              } else {
+                  // Calculate days, hours, minutes, and seconds
+                  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+                  // Display the countdown
+                  document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until Christmas!`;
+
+
+                  
+                  // Schedule the next update in one second
+                  setTimeout(updateCountdown, 1000);
+              }
+          }
+  
+          // Initial call to display the countdown immediately
+          updateCountdown();
+      </script>
+
+
+
+
     <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2iYsWCcwpYx0v5YEdIIQdG?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
     <p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0rncfjYSqPVX8I4tEsapfY?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
 
@@ -134,45 +175,102 @@
 
 
 
+  </body>
 
-
-      <h1>Live Countdown to Christmas</h1>
-      <p id="countdown"></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
   
-      <script>
-          // Function to update the countdown
-          function updateCountdown() {
-              // Set the date for Christmas (December 25th)
-              const christmasDate = new Date(new Date().getFullYear(), 11, 25, 0, 0, 0).getTime();
-              
-              // Get the current date and time
-              const currentDate = new Date().getTime();
-              
-              // Calculate the time remaining until Christmas
-              const timeRemaining = christmasDate - currentDate;
   
-              if (timeRemaining <= 0) {
-                  document.getElementById("countdown").innerHTML = "Merry Christmas!";
-              } else {
-                  // Calculate days, hours, minutes, and seconds
-                  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  <h1>Title will be here</h1>
+  <u1>
+    <li>List part 1</li>
+    <li>List part 2</li>
+    <li>List part 3</li>
+  </u1>
   
-                  // Display the countdown
-                  document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until Christmas!`;
-
-
-                  
-                  // Schedule the next update in one second
-                  setTimeout(updateCountdown, 1000);
-              }
-          }
+  <table>
+    <thead>
+      <th>Rank</th>
+      <th>Team</th>
+    </thead>
+    <tr>
+      <td>First</td>
+      <td>Giants</td>
+    </tr>
+  </table>
   
-          // Initial call to display the countdown immediately
-          updateCountdown();
-      </script>
+  <h2>This is <i>italic</i> heading</h1>
+  <h2>This is <u>underlined</u> heading</h2>
+  <p>This is a paragraph</p>
+    
+    
+  <h2>https://open.spotify.com/user/3166yzfsutmhikry3srvibl2nliy?si=81857ae232904654</h2>
+  <a href = "https://open.spotify.com/user/3166yzfsutmhikry3srvibl2nliy?si=81857ae232904654" target = "_self">Spotify Account</a>
+    
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/playlist/0Br2xcqRptesEaIMi2G2aB?utm_source=generator" width="100%" height="352"
+    frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"></iframe>
+  
+    <h1>Setting Font Size</h1>
+  
+  <body>
+    <font size = "1">Font size = "1"</font><br />
+    <font size = "2">Font size = "2"</font><br />
+    <font size = "3">Font size = "3"</font><br />
+    <font size = "4">Font size = "4"</font><br />
+    <font size = "5">Font size = "5"</font><br />
+    <font size = "6">Font size = "6"</font><br />
+    <font size = "7">Font size = "7"</font>
+  </body>
+  
+    <h1>Relative Font Size</h1>
+  
+  <body>
+    <font size = "-1">Font size = "-1"</font><br />
+    <font size = "+1">Font size = "+1"</font><br />
+    <font size = "+2">Font size = "+2"</font><br />
+    <font size = "+3">Font size = "+3"</font><br />
+    <font size = "+4">Font size = "+4"</font>
+  </body>
+  
+    <h1>Font Face</h1>
+  
+  <body>
+    <font face = "Times New Roman" size = "5">Times New Roman</font><br />
+    <font face = "Verdana" size = "5">Verdana</font><br />
+    <font face = "Comic sans MS" size =" 5">Comic Sans MS</font><br />
+    <font face = "WildWest" size = "5">WildWest</font><br />
+    <font face = "Bedrock" size = "5">Bedrock</font><br />
+  </body>
+  
+    <h1>Setting Font Color</h1>
+  
+  <body>
+    <font color = "#FF00FF">This text is in pink</font><br />
+    <font color = "red">This text is red</font>
+  </body>
+  
+    <h1>Setting Basefont Color</h1>
+  
+  <body>
+    <basefont face = "arial, verdana, sans-serif" size = "2" color = "#ff0000">
+    <p>This is the page's default font.</p>
+    <h2>Example of the &lt;basefont&gt; Element</h2>
+    
+    <p><font size = "+2" color = "darkgray">
+      This is darkgray text with two sizes larger
+     </font>
+    </p>
+  
+    <p><font face = "courier" size = "-1" color = "#000000">
+      It is a courier font, a size smaller and black in color.
+     </font>
+    </p>
   </body>
 
 
